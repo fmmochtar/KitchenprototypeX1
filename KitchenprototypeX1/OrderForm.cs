@@ -228,7 +228,7 @@ namespace KitchenprototypeX1
             else
 
             {
-                String addMenu = "insert into customer values (next value for sequence_1, '" + namecustomerBox.Text + "', '" + seatnumberBox.Text + "', " + adminIDBox.Text + ");";
+                String addMenu = "insert into customer values (next value for incseq.sequence_1, '" + namecustomerBox.Text + "', '" + seatnumberBox.Text + "', " + adminIDBox.Text + ");";
                 using (SqlCommand tambah = new SqlCommand("", koneksi))
                 {
 

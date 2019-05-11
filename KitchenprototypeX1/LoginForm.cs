@@ -19,6 +19,9 @@ namespace KitchenprototypeX1
         public LoginForm()
         {
             InitializeComponent();
+
+            button_reg.Visible = false;
+     
         }
 
 

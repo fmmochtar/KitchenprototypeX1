@@ -22,7 +22,7 @@ namespace KitchenprototypeX1
 
             var table = new SqlDataAdapter();
 
-            table.SelectCommand = new SqlCommand("select a.id_orders as 'Order ID', b.name_menu as 'Menu', a.quantity_order as 'Quantity', c.name_customer as 'Customer Name', c.seat_customer as 'Seat number' from orders as a inner join menus b on a.id_menu = b.id_menu inner join customer c on c.id_customer = a.id_customer order by a.id_orders where " + categoryBox.Text + " like '%" + searchBox.Text + "%'");
+            table.SelectCommand = new SqlCommand("select a.id_orders as 'Order ID', b.name_menu as 'Menu', a.quantity_order as 'Quantity', c.name_customer as 'Customer Name', c.seat_customer as 'Seat number' from orders as a inner join menus b on a.id_menu = b.id_menu inner join customer c on c.id_customer = a.id_customer order by a.id_orders where '" + categoryBox.Text + "' like '%" + searchBox.Text + "%'");
             table.SelectCommand.Connection = koneksi;
             table.SelectCommand.CommandType = CommandType.Text;
             table.Fill(tabelsearch);

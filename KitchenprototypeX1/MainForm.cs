@@ -13,6 +13,9 @@ namespace KitchenprototypeX1
 {
     public partial class MainForm : Form
     {
+
+       
+
         SqlConnection koneksi = new SqlConnection(Properties.Settings.Default.ConnectionString);
 
         public void showTable()
@@ -35,6 +38,9 @@ namespace KitchenprototypeX1
         {
             InitializeComponent();
             showTable();
+
+            button_order_group.Visible = false;
+            button_search_order.Visible = false;
         }
 
         private void button3_Click(object sender, EventArgs e)
